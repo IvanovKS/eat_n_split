@@ -4,7 +4,12 @@ function FriendCard() {
   const randomFriend = useRandomFriend();
   if (!randomFriend) return <div>...</div>;
 
-  return <div>{randomFriend.firstName}</div>;
+  return (
+    <div>
+      <h2>{randomFriend.firstName}</h2>
+      <img src={randomFriend.image} alt="avatar" />
+    </div>
+  );
 }
 
 export default FriendCard;
