@@ -1,7 +1,6 @@
 import { Box as MuiBox } from '@mui/material';
 import styled from 'styled-components';
 import FriendsPanel from '../../../widgets/friends-panel';
-import { FriendCard } from '../../../entities/friend';
 import { useMainPage } from '../model/useMainPage';
 
 const StyledBox = styled(MuiBox)`
@@ -19,7 +18,6 @@ function MainPage() {
   const { number, handleClick } = useMainPage();
   return (
     <StyledBox>
-      {/* <FriendCard /> */}
       {/* <button onClick={handleClick}>{number}</button> */}
       <FriendsPanel />
       <FriendsPanel />

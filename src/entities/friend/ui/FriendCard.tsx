@@ -1,13 +1,14 @@
 import { useRandomFriend } from '../model/friendApi';
+import Progress from '../../../shared/ui/Progress';
 
 function FriendCard() {
   const randomFriend = useRandomFriend();
-  if (!randomFriend) return <div>...</div>;
+  if (!randomFriend) return <Progress />;
 
   return (
     <div>
-      <h2>{randomFriend.firstName}</h2>
       <img src={randomFriend.image} alt="avatar" />
+      <h2>{randomFriend.firstName}</h2>
     </div>
   );
 }

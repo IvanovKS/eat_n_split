@@ -11,7 +11,7 @@ export const useRandomFriend = () => {
     fetch(url)
       .then((res) => res.json())
       .then((json) => {
-        console.log(json), setFriend(json);
+        setFriend(json);
       });
   }, []);
 
